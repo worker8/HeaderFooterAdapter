@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     MainAdapter mainAdapter;
     FrameLayout mainContainer;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             mainAdapter.hideFooter();
         } else {
             mainAdapter.showFooter();
-            recyclerView.getLayoutManager().scrollToPosition(mainAdapter.getRealItemCount() + 1);
+            recyclerView.getLayoutManager().scrollToPosition(mainAdapter.getItemCount() - 1);
         }
     }
 }
