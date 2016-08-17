@@ -178,6 +178,11 @@ abstract public class HeaderFooterAdapter extends RecyclerView.Adapter {
         }
     }
 
+    public void notifyRealItemChanged(int position) {
+        int realPosition = position + (hasHeader ? 1 : 0);
+        notifyItemChanged(realPosition);
+    }
+
     /****************
      * Real children
      ****************/
