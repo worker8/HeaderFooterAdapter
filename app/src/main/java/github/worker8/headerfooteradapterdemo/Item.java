@@ -8,7 +8,7 @@ public class Item {
         return selected;
     }
 
-    public void select() {
+    public void toggleSelection() {
         selected = !selected;
     }
 }

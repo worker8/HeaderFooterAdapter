@@ -51,7 +51,7 @@ public class MainAdapter extends HeaderFooterAdapter {
                 Toast.makeText(holder.itemView.getContext(), temp, Toast.LENGTH_SHORT).show();
                 Log.d("HeaderFooterAdapter", temp);
 
-                item.select();
+                item.toggleSelection();
 
                 notifyRealItemChanged(position);
             }
