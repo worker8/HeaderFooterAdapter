@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 23
@@ -30,4 +32,8 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.1.0'
 
     testImplementation 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

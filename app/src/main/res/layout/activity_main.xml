@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_container"
+    android:id="@+id/mainContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/activity_margin">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="60dp">
+        android:layout_marginBottom="60dp"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager">
 
     </android.support.v7.widget.RecyclerView>
 
@@ -23,21 +25,20 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/toggle_header"
+            android:id="@+id/toggleHeaderButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
             android:elevation="5dp"
             android:inputType="textCapWords"
-            android:onClick="toggleHeader"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:text="Toggle Header"
             android:textColor="#FFFFFFFF" />
 
         <Button
-            android:id="@+id/toggle_footer"
+            android:id="@+id/toggleFooterButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_margin"
@@ -45,7 +46,6 @@
             android:background="@color/colorAccent"
             android:elevation="5dp"
             android:inputType="textCapWords"
-            android:onClick="toggleFooter"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:text="Toggle Footer"
